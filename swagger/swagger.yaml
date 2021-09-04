@@ -1,0 +1,42 @@
+swagger: '2.0'
+info:
+  title: /rest/api/v1/user
+  description: User Api 
+  version: 1.0.0
+schemes:
+- https
+produces:
+- application/json
+x-google-backend:
+  address: https://glocally-accountandmanagement-uwawuosv7q-uc.a.run.app
+security:
+- api_key: []
+paths:
+    /rest/api/v1/userSignUp:
+      post:
+        summary: used for SignUp
+        operationId: signUp
+        responses:
+          '200':
+            description: A successful response
+            schema:
+              type: string
+
+    /rest/api/v1/userSignIn:
+      post:
+        summary: used for SignIn
+        operationId: signIn
+        responses:
+          '200':
+            description: A successful response
+            schema:
+              type: string
+
+securityDefinitions:
+  auth0_jwt:
+    authorizationUrl: "https://glocally.eu.auth0.com/authorize"
+    flow: "implicit"
+    type: "oauth2"
+    x-google-issuer: "https://glocally.eu.auth0.com/"
+    x-google-jwks_uri: "https://glocally.eu.auth0.com/.well-known/jwks.json"
+    x-google-audiences: "https://glocally.eu.auth0.com/api/v2/" 
