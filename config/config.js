@@ -1,11 +1,9 @@
 module.exports =
 {
 
-    "NODE_ENV":"production",
-    "dbTest":"mongodb://osamaahmed17:Airuniversity17@glocallytest-shard-00-00.5vrjj.mongodb.net:27017,glocallytest-shard-00-01.5vrjj.mongodb.net:27017,glocallytest-shard-00-02.5vrjj.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-41pxah-shard-0&authSource=admin&retryWrites=true&w=majority",
-    "dbProduction":"mongodb://osamaahmed17:Airuniversity17@glocally-shard-00-00.wsvsz.mongodb.net:27017,glocally-shard-00-01.wsvsz.mongodb.net:27017,glocally-shard-00-02.wsvsz.mongodb.net:27017/masterdata?ssl=true&replicaSet=atlas-6e5e3z-shard-0&authSource=admin&retryWrites=true&w=majority",
-    "MASTERDATALOGIN_CONFIGURATION":"https://glocally-masterdata-uwawuosv7q-uc.a.run.app/rest/api/v1/masterdata/configuration",
-    "AUTHTOKEN_CONNECTION":"https://glocally.eu.auth0.com/oauth/token",
+    "dbProduction":"mongodb://osamaahmed17:osamaahmed17@hackfest-shard-00-00.bhrym.mongodb.net:27017,hackfest-shard-00-01.bhrym.mongodb.net:27017,hackfest-shard-00-02.bhrym.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-574kto-shard-0&authSource=admin&retryWrites=true&w=majority",
+    "MASTERDATALOGIN_CONFIGURATION":"https://masterdata-hackfest-3alps67tda-uc.a.run.app/rest/api/v1/masterdata/configuration",
+    "AUTHTOKEN_CONNECTION":"https://dev-v6aygfgf.us.auth0.com/oauth/token",
     "winston": {
         "file": {
             "level": "info",
@@ -25,14 +23,15 @@ module.exports =
     },
     "nodeMail": {
         "host":"smtp.gmail.com",
-        "user":"noreply@glocally.de",
+        "user":"osamaahmedtahir170395@gmail.com",
         "port": 465,
         "secure": true,
         "type": "OAuth2",
-        "clientId": "641042111705-0psiioos3vk6ontgh62077jlf7d68q9o.apps.googleusercontent.com",
-        "clientSecret": "nSHUH_Vc6-Lb9NUM2nXb2D3x",
-        "refreshToken": "1//04qpypYhK0p9gCgYIARAAGAQSNwF-L9IryGqokhYHIL1vkd_nrHpvlr-nChGGPgBBd83rhE7L0Cxvb5IdySsIAZqPk465WeZ-fzg",
+        "clientId": "771217636998-q5dh5he4kmkvlfctir4acds2d5qefrj5.apps.googleusercontent.com",
+        "clientSecret": "cIyb-fiDs1d6vpgONXNHJTVB",
+        "refreshToken": "1//04vPbJ7uUGceJCgYIARAAGAQSNwF-L9IrGLUmouHc17_k-P7SxYodA9yVh9oys9B4SVd8VpH0kZrU3mocai25Ydabpe5f5Xk9Zn0",
         
+
 
     },
     "cache": {
