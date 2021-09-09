@@ -11,14 +11,8 @@ class userModel {
   }
   initSchema() {
     const schema = new Schema({
-      storeName: {
-        type: String,
-        required: true,
-      },
-      streetAddress: {
-        type: String,
-        required: true
-      },
+      
+      
       postalCode: {
         type: Number,
         required: true
