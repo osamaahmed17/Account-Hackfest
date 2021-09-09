@@ -8,12 +8,6 @@ module.exports =
     "properties": {
 
  
-      "storeName": {
-        "type": "string"
-      },
-      "streetAddress": {
-        "type": "string"
-      },
 
       "email": {
         "type": "string"

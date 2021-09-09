@@ -186,7 +186,7 @@ module.exports.sendConfirmationEmail = (email, confirmationCode) => {
                                             <table border="0" cellspacing="0" cellpadding="0">
                                                 <tr>
                                                     <td align="center" style="border-radius: 3px;" bgcolor="#20cc9c"><a
-                                                            href="https://glocally-accountandmanagement-uwawuosv7q-uc.a.run.app/rest/api/v1/confirm/${confirmationCode}" target="_blank"
+                                                            href="https://account-hackfest-3alps67tda-uc.a.run.app/rest/api/v1/confirm/${confirmationCode}" target="_blank"
                                                             style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #20cc9c; display: inline-block;">Confirm
                                                             Account</a></td>
                                                 </tr>
@@ -207,7 +207,7 @@ module.exports.sendConfirmationEmail = (email, confirmationCode) => {
                             <td bgcolor="#ffffff" align="left"
                                 style="padding: 20px 30px 20px 30px; color: #666666; font-family: 'Montserrat', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
                                 <p style="margin: 0;"><a href="#" target="_blank"
-                                        style="color: #20cc9c;">https://glocally-accountandmanagement-uwawuosv7q-uc.a.run.app/rest/api/v1/confirm/${confirmationCode}</a></p>
+                                        style="color: #20cc9c;">https://account-hackfest-3alps67tda-uc.a.run.app/rest/api/v1/confirm/${confirmationCode}</a></p>
                             </td>
                         </tr>
                         <tr>

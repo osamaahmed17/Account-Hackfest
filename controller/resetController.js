@@ -413,8 +413,6 @@ class resetController {
 
     async updateUserInformation(req, res) {
         var userEmail = req.header('userEmail')
-        var storeName = req.body.storeName
-        var streetAddress = req.body.streetAddress
         var postalCode = req.body.postalCode
         var city = req.body.city
         async.waterfall([
@@ -424,8 +422,6 @@ class resetController {
                         return res.status(400).send("No user exist");
 
                     }
-                    user.storeName = storeName
-                    user.streetAddress = streetAddress
                     user.postalCode = postalCode
                     user.city = city
                     user.save(function (err) {
