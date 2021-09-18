@@ -204,7 +204,7 @@ class resetController {
                                                             <table border="0" cellspacing="0" cellpadding="0">
                                                                 <tr>
                                                                     <td align="center" style="border-radius: 3px;" bgcolor="#295CF5"><a
-                                                                            href="https://hackfest2021.herokuapp.com/session/resetPass/${token}" target="_blank"
+                                                                            href="https://hackfest2021.herokuapp.com/session/resetPass/?token=${token}" target="_blank"
                                                                             style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #295CF5; display: inline-block;">Reset
                                                                             Password</a></td>
                                                                 </tr>
