@@ -199,6 +199,11 @@ class resetController {
                                         <tr>
                                             <td bgcolor="#ffffff" align="left">
                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                <td bgcolor="#ffffff" align="center" valign="top"
+                                                    style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Montserrat', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
+                                                    <a href="https://imgbb.com/"><img src="https://i.ibb.co/Z1TYjK4/Group-11.png" alt="Group 11" border="0"></a>                            </td>
+                                            </tr>
                                                     <tr>
                                                         <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;">
                                                             <table border="0" cellspacing="0" cellpadding="0">
@@ -313,7 +318,7 @@ class resetController {
         const salt = await bcrypt.genSalt(10);
         var userEmail = req.header('userEmail')
         var password = await bcrypt.hash(req.body.password, salt);
-      
+
         async.waterfall([
             function (done) {
 
@@ -327,19 +332,19 @@ class resetController {
                             if (response == true) {
                                 user.password = password
                                 user.save(function (err) {
-                                    
+
                                     done(err, user)
-                                    user.password= undefined
-                                    user._id= undefined
-                                    user.confirmationCode=undefined
+                                    user.password = undefined
+                                    user._id = undefined
+                                    user.confirmationCode = undefined
                                     let response = {
                                         success: true,
                                         responseCode: "T01",
                                         message_en: "The transaction was completed successfully.",
                                         data: []
                                     };
-                                    response.data= user
-                                   return res.status(201).send(response);
+                                    response.data = user
+                                    return res.status(201).send(response);
                                 });
                             }
                             else {
@@ -349,7 +354,7 @@ class resetController {
 
                         });
                     }
-                  
+
                 });
             },
 
@@ -413,19 +418,19 @@ class resetController {
                     user.city = city
                     user.save(function (err) {
                         done(err, user);
-                        
-                            user.password= undefined
-                            user._id= undefined
-                            user.confirmationCode=undefined
-                            let response = {
-                                success: true,
-                                responseCode: "T01",
-                                message_en: "The transaction was completed successfully.",
-                                data: []
-                            };
-                            response.data= user
-                           return res.status(201).send(response);
-                    
+
+                        user.password = undefined
+                        user._id = undefined
+                        user.confirmationCode = undefined
+                        let response = {
+                            success: true,
+                            responseCode: "T01",
+                            message_en: "The transaction was completed successfully.",
+                            data: []
+                        };
+                        response.data = user
+                        return res.status(201).send(response);
+
 
                     });
                 });
