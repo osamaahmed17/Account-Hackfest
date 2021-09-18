@@ -27,9 +27,9 @@ module.exports =
         "port": 465,
         "secure": true,
         "type": "OAuth2",
-        "clientId": "771217636998-q5dh5he4kmkvlfctir4acds2d5qefrj5.apps.googleusercontent.com",
-        "clientSecret": "cIyb-fiDs1d6vpgONXNHJTVB",
-        "refreshToken": "1//04vPbJ7uUGceJCgYIARAAGAQSNwF-L9IrGLUmouHc17_k-P7SxYodA9yVh9oys9B4SVd8VpH0kZrU3mocai25Ydabpe5f5Xk9Zn0",
+        "clientId": "771217636998-ameuj7kr9ao0semh580gj609rlgitt88.apps.googleusercontent.com",
+        "clientSecret": "BSk3xqxFQ2aA0LK7wOjdZgz3",
+        "refreshToken": "1//04rEDk82Bx5_ACgYIARAAGAQSNwF-L9IrR-Ninq6uUnzSKv6UxhQBEDIEfzgYpGr5fvR0UAlZepwVGhKc9CnmAEsEA7g5b2Bn_98",
         
 
 

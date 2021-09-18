@@ -15,15 +15,13 @@ module.exports =
       "password": {
         "type": "string"
       },
-      "postalCode": {
-        "type": "number"
-      },
-      "city": {
+      "mobileNumber": {
         "type": "string"
       },
-      "preferredLanguage": {
+      "cnicNumber": {
         "type": "string"
       },
+
       "confirmationCode": {
         "type": "string"
 

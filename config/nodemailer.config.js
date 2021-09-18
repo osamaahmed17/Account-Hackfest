@@ -140,7 +140,7 @@ module.exports.sendConfirmationEmail = (email, confirmationCode) => {
         </style>
     </head>
     
-    <body style="background-color: #f4f4f4; margin: 0 !important; padding: 0 !important;">
+    <body style="background-color: #295CF5; margin: 0 !important; padding: 0 !important;">
         <!-- HIDDEN PREHEADER TEXT -->
         <div
             style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Montserrat', Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
@@ -148,7 +148,7 @@ module.exports.sendConfirmationEmail = (email, confirmationCode) => {
         <table border="0" cellpadding="0" cellspacing="0" width="100%">
             <!-- LOGO -->
             <tr>
-                <td bgcolor="#20cc9c" align="center">
+                <td bgcolor="#295CF5" align="center">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
                         <tr>
                             <td align="center" valign="top" style="padding: 0px 10px 0px 10px;"> </td>
@@ -157,19 +157,18 @@ module.exports.sendConfirmationEmail = (email, confirmationCode) => {
                 </td>
             </tr>
             <tr>
-                <td bgcolor="#20cc9c" align="center" style="padding: 0px 10px 0px 10px;">
+                <td bgcolor="#295CF5" align="center" style="padding: 0px 10px 0px 10px;">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
                         <tr>
                             <td bgcolor="#ffffff" align="center" valign="top"
                                 style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Montserrat', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
-                                <h1 style="font-size: 48px; font-weight: 400; margin: 2;">Welcome!</h1> 
-                            </td>
+                                <a href="https://imgbb.com/"><img src="https://i.ibb.co/Z1TYjK4/Group-11.png" alt="Group 11" border="0"></a>                            </td>
                         </tr>
                     </table>
                 </td>
             </tr>
             <tr>
-                <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
+                <td bgcolor="#295CF5" align="center" style="padding: 0px 10px 0px 10px;">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
                         <tr>
                             <td bgcolor="#ffffff" align="left"
@@ -185,9 +184,9 @@ module.exports.sendConfirmationEmail = (email, confirmationCode) => {
                                         <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;">
                                             <table border="0" cellspacing="0" cellpadding="0">
                                                 <tr>
-                                                    <td align="center" style="border-radius: 3px;" bgcolor="#20cc9c"><a
+                                                    <td align="center" style="border-radius: 3px;" bgcolor="#295CF5"><a
                                                             href="https://account-hackfest-3alps67tda-uc.a.run.app/rest/api/v1/confirm/${confirmationCode}" target="_blank"
-                                                            style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #20cc9c; display: inline-block;">Confirm
+                                                            style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #295CF5; display: inline-block;">Confirm
                                                             Account</a></td>
                                                 </tr>
                                             </table>
@@ -196,31 +195,11 @@ module.exports.sendConfirmationEmail = (email, confirmationCode) => {
                                 </table>
                             </td>
                         </tr> <!-- COPY -->
-                        <tr>
-                            <td bgcolor="#ffffff" align="left"
-                                style="padding: 0px 30px 0px 30px; color: #666666; font-family: 'Montserrat', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
-                                <p style="margin: 0;">If that doesn't work, copy and paste the following link in your
-                                    browser:</p>
-                            </td>
-                        </tr> <!-- COPY -->
-                        <tr>
-                            <td bgcolor="#ffffff" align="left"
-                                style="padding: 20px 30px 20px 30px; color: #666666; font-family: 'Montserrat', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
-                                <p style="margin: 0;"><a href="#" target="_blank"
-                                        style="color: #20cc9c;">https://account-hackfest-3alps67tda-uc.a.run.app/rest/api/v1/confirm/${confirmationCode}</a></p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td bgcolor="#ffffff" align="left"
-                                style="padding: 0px 30px 20px 30px; color: #666666; font-family: 'Montserrat', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
-                                <p style="margin: 0;">If you have any questions, just reply to this email—we're always happy
-                                    to help out.</p>
-                            </td>
-                        </tr>
+                       
                         <tr>
                             <td bgcolor="#ffffff" align="left"
                                 style="padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666; font-family: 'Montserrat', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
-                                <p style="margin: 0;">Cheers,<br>Glocally Team</p>
+                                <p style="margin: 0;">Cheers,<br>Watson Blue Team</p>
                             </td>
                         </tr>
                     </table>

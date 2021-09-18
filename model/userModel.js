@@ -13,11 +13,16 @@ class userModel {
     const schema = new Schema({
       
       
-      postalCode: {
-        type: Number,
+      cnicNumber: {
+        type: String,
         required: true
       },
-      city: {
+      userAuthentication: {
+        type: Boolean,
+        required: true,
+        default:false
+      },
+      mobileNumber: {
         type: String,
         required: true
       },
@@ -41,16 +46,14 @@ class userModel {
         required: true,
         unique: true
       },
-      preferredLanguage: {
-        type: String,
-        required: true
-      },
+    
       resetPasswordToken: {
         type: String
       },
       resetPasswordExpires:{
         type:Date
       }
+      
     });
     schema.plugin(uniqueValidator)
     mongoose.model("user", schema);

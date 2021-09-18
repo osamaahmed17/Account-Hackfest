@@ -6,7 +6,6 @@ const config = require('../config/config.js')
 const request = require('request')
 const axios = require('axios')
 const nodemailer = require("../config/nodemailer.config.js");
-const Vonage = require('@vonage/server-sdk')
 
 
 
@@ -16,7 +15,7 @@ class userController {
     constructor() {
         this.signUp = this.signUp.bind(this);
         this.signIn = this.signIn.bind(this);
-      
+
 
 
         this.response = {
@@ -29,7 +28,7 @@ class userController {
     }
 
 
-    async sendMessage(req,res){
+    async sendMessage(req, res) {
         console.log()
     }
 
@@ -63,19 +62,19 @@ class userController {
         req.body.password = await bcrypt.hash(req.body.password, salt);
         let insertData;
 
-      
+
         try {
             insertData = await userModel.getInstance().create(req.body);
         }
         catch (error) {
-            return res.status(400).send("Email is already in Use" );
+            return res.status(400).send("Email is already in Use");
 
         }
         nodemailer.sendConfirmationEmail(
             req.body.email,
             token
         );
-       
+
 
         axios.get(config.MASTERDATALOGIN_CONFIGURATION, {
             params: {
@@ -117,6 +116,13 @@ class userController {
 
     async signIn(req, res) {
         var user = await userModel.getInstance().findOne({ email: req.body.email });
+        var authorization = {
+            method: 'get',
+            url: 'https://sandbox.jsbl.com/v2/oauth-blb?grant_type=client_credentials',
+            headers: {
+                'Authorization': 'Basic eWptR0NMbk43RlBINWJCM1JjbWtSc0g1TWFzNFZHVGM6bUxLMzVYR3dtS0dQWlFyUw=='
+            }
+        };
         if (user) {
             const validPassword = await bcrypt.compare(req.body.password, user.password);
             if (user.status != "Active") {
@@ -141,32 +147,43 @@ class userController {
                         headers: { 'content-type': 'application/json' },
                         body: '{"client_id":"' + clientId + '","client_secret":"' + clientSecret + '","audience":"' + audienceUser + '","grant_type":"' + grantType + '"}'
                     }
-                    try {
-                        request(options, function (error, response, body) {
-                            let accessResponse = {
-                                success: true,
-                                responseCode: "T01",
-                                message_en: "The transaction was completed successfully.",
-                                token: [],
-                                data: []
-                            };
-                            user.password = undefined;
-                            accessResponse.token = body
-                            accessResponse.data = user
-                            if (error) throw new Error(error);
-                            return res.status(201).send(accessResponse);
-                        });
-                    }
-                    catch (error) {
-                        return res.status(401).send(error);
-                    }
+
+                    let authorizationToken
+                    axios(authorization)
+                        .then(function (authorizationReponse) {
+                            authorizationToken=authorizationReponse.data.access_token
+                        }).then(function () {
+                            try {
+                                request(options, function (error, response, body) {
+                                    let accessResponse = {
+                                        success: true,
+                                        responseCode: "T01",
+                                        message_en: "The transaction was completed successfully.",
+                                        token: [],
+                                        authorization: [],
+                                        data: []
+                                    };
+                                    user.password = undefined;
+                                    accessResponse.token = body
+                                    accessResponse.data = user
+                                    accessResponse.authorization=authorizationToken
+                                    if (error) throw new Error(error);
+                                    return res.status(201).send(accessResponse);
+                                });
+                            }
+                            catch (error) {
+                                return res.status(401).send(error);
+                            }
+                        })
+
+                
                 })
             }
             else {
-                return res.status(400).send("Invalid Password" );
+                return res.status(400).send("Invalid Password");
             }
         } else {
-            return res.status(401).send( "User does not exist" );
+            return res.status(401).send("User does not exist");
         }
     }
 
