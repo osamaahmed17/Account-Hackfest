@@ -67,7 +67,7 @@ class userController {
             insertData = await userModel.getInstance().create(req.body);
         }
         catch (error) {
-            return res.status(400).send("Email is already in Use");
+            return res.status(400).send({error:"Email is already in Use"});
 
         }
         nodemailer.sendConfirmationEmail(

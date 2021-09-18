@@ -140,41 +140,37 @@ module.exports.sendConfirmationEmail = (email, confirmationCode) => {
         </style>
     </head>
     
-    <body style="background-color: #295CF5; margin: 0 !important; padding: 0 !important;">
+    <body style="background-color: 295CF5; margin: 0 !important; padding: 0 !important;">
         <!-- HIDDEN PREHEADER TEXT -->
         <div
             style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Montserrat', Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
             We're thrilled to have you here! Get ready to dive into your new account. </div>
         <table border="0" cellpadding="0" cellspacing="0" width="100%">
             <!-- LOGO -->
-            <tr>
-                <td bgcolor="#295CF5" align="center">
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
-                        <tr>
-                            <td align="center" valign="top" style="padding: 0px 10px 0px 10px;"> </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
+         
             <tr>
                 <td bgcolor="#295CF5" align="center" style="padding: 0px 10px 0px 10px;">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
                         <tr>
                             <td bgcolor="#ffffff" align="center" valign="top"
                                 style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Montserrat', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
-                                <a href="https://imgbb.com/"><img src="https://i.ibb.co/Z1TYjK4/Group-11.png" alt="Group 11" border="0"></a>                            </td>
+                            </td>
                         </tr>
                     </table>
                 </td>
             </tr>
             <tr>
-                <td bgcolor="#295CF5" align="center" style="padding: 0px 10px 0px 10px;">
+                <td bgcolor="295CF5" align="center" style="padding: 0px 10px 0px 10px;">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+                        <tr>
+                            <td bgcolor="#ffffff" align="center" valign="top"
+                                style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Montserrat', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
+                                <a href="https://imgbb.com/"><img src="https://i.ibb.co/Z1TYjK4/Group-11.png" alt="Group 11" border="0"></a>                            </td>
+                        </tr>
                         <tr>
                             <td bgcolor="#ffffff" align="left"
                                 style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Montserrat', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
-                                <p style="margin: 0;">We're excited to have you get started. First, you need to confirm your
-                                    account. Just press the button below.</p>
+                                <p style="margin: 0;">You are receiving this because you (or someone else) have requested the reset of the password for your account. Just press the button below.</p>
                             </td>
                         </tr>
                         <tr>
@@ -186,8 +182,8 @@ module.exports.sendConfirmationEmail = (email, confirmationCode) => {
                                                 <tr>
                                                     <td align="center" style="border-radius: 3px;" bgcolor="#295CF5"><a
                                                             href="https://account-hackfest-3alps67tda-uc.a.run.app/rest/api/v1/confirm/${confirmationCode}" target="_blank"
-                                                            style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #295CF5; display: inline-block;">Confirm
-                                                            Account</a></td>
+                                                            style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #295CF5; display: inline-block;">Reset
+                                                            Password</a></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -195,7 +191,13 @@ module.exports.sendConfirmationEmail = (email, confirmationCode) => {
                                 </table>
                             </td>
                         </tr> <!-- COPY -->
-                       
+                      
+                        <tr>
+                            <td bgcolor="#ffffff" align="left"
+                                style="padding: 0px 30px 20px 30px; color: #666666; font-family: 'Montserrat', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+                                <p style="margin: 0;">If you did not request this, please ignore this email and your password will remain unchanged.</p>
+                            </td>
+                        </tr>
                         <tr>
                             <td bgcolor="#ffffff" align="left"
                                 style="padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666; font-family: 'Montserrat', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
