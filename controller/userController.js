@@ -120,7 +120,7 @@ class userController {
             method: 'get',
             url: 'https://sandbox.jsbl.com/v2/oauth-blb?grant_type=client_credentials',
             headers: {
-                'Authorization': 'Basic eWptR0NMbk43RlBINWJCM1JjbWtSc0g1TWFzNFZHVGM6bUxLMzVYR3dtS0dQWlFyUw=='
+                'Authorization': 'Basic MHlQSmRXaFlWckk0MzVTRjNBczhIT0YxMnJ2dkxWZE86YmpVVUY0TDFKeHpnWWpNdg=='
             }
         };
         if (user) {

@@ -11,8 +11,7 @@ class userModel {
   }
   initSchema() {
     const schema = new Schema({
-      
-      
+
       cnicNumber: {
         type: String,
         required: true
@@ -20,11 +19,26 @@ class userModel {
       userAuthentication: {
         type: Boolean,
         required: true,
-        default:false
+        default: false
       },
       mobileNumber: {
         type: String,
         required: true
+      },
+      merchantType: {
+        type: String,
+        required: true,
+        default: "0088"
+      },
+      companyName: {
+        type: String,
+        required: true,
+        default: "BIFILER"
+      },
+      reservedOne: {
+        type: String,
+        required: true,
+        default: "Reserved1"
       },
       email: {
         type: String,
@@ -46,14 +60,30 @@ class userModel {
         required: true,
         unique: true
       },
-    
+      isAccountOpem:{
+        type: Boolean,
+        required: true,
+        default: false
+
+      },
+      cnicIssuanceDate:{
+        type: String,
+        required: true,
+        default: "20201105"
+      },
+      MobileNetwork:{
+        type: String,
+        required: true,
+        default: "JAZZ"
+      },
+
       resetPasswordToken: {
         type: String
       },
-      resetPasswordExpires:{
-        type:Date
+      resetPasswordExpires: {
+        type: Date
       }
-      
+
     });
     schema.plugin(uniqueValidator)
     mongoose.model("user", schema);

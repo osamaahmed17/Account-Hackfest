@@ -5,12 +5,9 @@ const userModel = require("../model/userModel")
 
 
 
-class authenticateController {
+class accountOpenController {
     constructor() {
-        this.authenticateUser = this.authenticateUser.bind(this);
-
-
-
+        this.accountOpen = this.accountOpen.bind(this);
         this.response = {
             success: true,
             responseCode: "T01",
@@ -19,11 +16,8 @@ class authenticateController {
         };
 
     }
-
-
-    async authenticateUser(req, res) {
+    async accountOpen(req, res) {
         let email = req.header('userEmail')
-        console.log(email)
         let authorization = req.header('Authorization')
         await userModel.getInstance().findOne({
             email: email,
@@ -32,27 +26,27 @@ class authenticateController {
                 res.status(404).send({ message: "User not found" });
                 return;
             }
-            let merchantType = req.body.merchantType
-            let cnicNumber = req.body.cnicNumber
-            let mobileNumber = req.body.mobileNumber
-            let companyName = req.body.companyName
-            let reservedOne = req.body.reservedOne
-            let transactionType = req.body.transactionType
+
+         let cnicIssuanceDate=req.body.cnicIssuanceDate
+         let mobileNetwork=req.body.mobileNetwork
             var data = JSON.stringify({
-                "VerifyAccountRequest": {
-                    "MerchantType": merchantType,
+                "AccountOpeningRequest": {
+                    "MerchantType": user.merchantType,
                     "TraceNo": Math.floor(100000 + Math.random() * 900000),
-                    "CNIC": cnicNumber,
-                    "MobileNo": mobileNumber,
+                    "CompanyName": user.companyName,
                     "DateTime": moment().format("YYYYMMddHHmmss"),
-                    "CompanyName": companyName,
-                    "Reserved1": reservedOne,
-                    "TransactionType": transactionType
+                    "CnicIssuanceDate":cnicIssuanceDate,
+                    "MobileNo":user.mobileNumber,
+                    "MobileNetwork":mobileNetwork,
+                    "CNIC": user.cnicNumber,
+                    "EmailId":email
+
+ 
                 }
             })
             var config = {
                 method: 'post',
-                url: 'https://sandbox.jsbl.com/v2/verifyaccount-blb',
+                url: 'https://sandbox.jsbl.com/v2/accountopening-blb',
                 headers: {
                     'Authorization': 'Bearer ' + authorization,
                     'Content-Type': 'application/json'
@@ -63,13 +57,9 @@ class authenticateController {
             axios(config)
                 .then(function (response) {
           
-                    user.userAuthentication = true
-                    user.merchantType=merchantType
-                    user.cnicNumber=cnicNumber
-                    user.mobileNumber=mobileNumber
-                    user.companyName=companyName
-                    user.reservedOne=reservedOne
-
+                    user.cnicIssuanceDate=cnicIssuanceDate
+                    user.mobileNetwork=mobileNetwork
+                
                     user.save((err) => {
                         if (err) {
                             res.status(500).send({ message: err });
@@ -83,7 +73,8 @@ class authenticateController {
                         message_en: "The transaction was completed successfully.",
                         data: []
                     };
-                    succesResponse.data = response.data.VerifyAccountResponse
+                    succesResponse.data =response.data.AccountOpeningResponse
+
                     return res.status(200).send(succesResponse);
 
                 })
@@ -97,4 +88,4 @@ class authenticateController {
         });
     }
 }
-module.exports = new authenticateController;
+module.exports = new accountOpenController;
