@@ -190,6 +190,10 @@ class resetController {
                             <tr>
                                 <td bgcolor="#295CF5" align="center" style="padding: 0px 10px 0px 10px;">
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+                                    <td bgcolor="#ffffff" align="center" valign="top"
+                                    style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Montserrat', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
+                                    <a href="https://imgbb.com/"><img src="https://i.ibb.co/Z1TYjK4/Group-11.png" alt="Group 11" border="0"></a>                            </td>
+                            </tr>
                                         <tr>
                                             <td bgcolor="#ffffff" align="left"
                                                 style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Montserrat', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
@@ -200,10 +204,7 @@ class resetController {
                                             <td bgcolor="#ffffff" align="left">
                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                 <tr>
-                                                <td bgcolor="#ffffff" align="center" valign="top"
-                                                    style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Montserrat', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
-                                                    <a href="https://imgbb.com/"><img src="https://i.ibb.co/Z1TYjK4/Group-11.png" alt="Group 11" border="0"></a>                            </td>
-                                            </tr>
+                                              
                                                     <tr>
                                                         <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;">
                                                             <table border="0" cellspacing="0" cellpadding="0">
