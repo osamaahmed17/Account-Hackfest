@@ -14,6 +14,11 @@ class userModel {
 
       cnicNumber: {
         type: String,
+        required: true,
+        default: "0088"
+      },
+      authorization: {
+        type: String,
         required: true
       },
       userAuthentication: {
@@ -60,7 +65,7 @@ class userModel {
         required: true,
         unique: true
       },
-      isAccountOpem:{
+      isAccountOpen:{
         type: Boolean,
         required: true,
         default: false

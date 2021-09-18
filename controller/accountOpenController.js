@@ -29,6 +29,7 @@ class accountOpenController {
 
          let cnicIssuanceDate=req.body.cnicIssuanceDate
          let mobileNetwork=req.body.mobileNetwork
+         
             var data = JSON.stringify({
                 "AccountOpeningRequest": {
                     "MerchantType": user.merchantType,
@@ -59,6 +60,7 @@ class accountOpenController {
           
                     user.cnicIssuanceDate=cnicIssuanceDate
                     user.mobileNetwork=mobileNetwork
+                    user.isAccountOpen=true
                 
                     user.save((err) => {
                         if (err) {

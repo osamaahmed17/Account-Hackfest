@@ -160,13 +160,13 @@ class userController {
                                         responseCode: "T01",
                                         message_en: "The transaction was completed successfully.",
                                         token: [],
-                                        authorization: [],
-                                        data: []
                                     };
+                                    user.authorization=authorizationToken
                                     user.password = undefined;
+                          
                                     accessResponse.token = body
+
                                     accessResponse.data = user
-                                    accessResponse.authorization=authorizationToken
                                     if (error) throw new Error(error);
                                     return res.status(201).send(accessResponse);
                                 });
