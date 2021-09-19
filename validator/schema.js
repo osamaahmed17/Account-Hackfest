@@ -25,7 +25,13 @@ module.exports =
       "confirmationCode": {
         "type": "string"
 
+      },
+
+      "authorization": {
+        "type": "string"
+
       }
+
 
     }
   }

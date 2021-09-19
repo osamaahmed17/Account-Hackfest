@@ -18,8 +18,7 @@ class userModel {
         default: "0088"
       },
       authorization: {
-        type: String,
-        required: true
+        type: String
       },
       userAuthentication: {
         type: Boolean,
